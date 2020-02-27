@@ -1,0 +1,417 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>Corporate Business Loan Application</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.2/examples/checkout/">
+
+    <!-- Bootstrap core CSS -->
+<link href="https://getbootstrap.com/docs/4.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="https://getbootstrap.com/docs/4.2/examples/checkout/form-validation.css" rel="stylesheet">
+  </head>
+  <body class="bg-light">
+    <div class="container">
+  <div class="py-5 text-center">
+    <img class="d-block mx-auto mb-4" src="https://upload.wikimedia.org/wikipedia/commons/a/af/J_P_Morgan_Logo_2008_1.svg" alt="" height="72">
+    <h2>Corporate Business Loan Application</h2>
+    <p class="lead">Below is an example of how machine learning models can be used by an banking client to predict the probability of loan default by a business client </p>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4 order-md-2 mb-4">
+      <h4 class="d-flex justify-content-between align-items-center mb-3">
+        <span class="text-muted">Defaulter Risk</span>
+        <!-- <span class="badge badge-secondary badge-pill">3</span> -->
+      </h4>
+
+      <div id="gg1" style="width: 200px; height: 150px;"></div>      
+      <!-- <a id="gg1_refresh" class="button grey">Random Refresh</a>-->
+    </div>
+
+
+    <div class="col-md-8 order-md-1">
+      <h4 class="mb-3">Business Details</h4>
+      <form class="needs-validation" novalidate>
+
+        <div class="mb-3">
+          <label for="email">Company Name</label>
+          <input type="text" class="form-control" value="ABC Company Pvt. Ltd">
+        </div>
+        <label for="firstName">Managing Director</label>
+
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="firstName">First name</label>
+            <input type="text" class="form-control" id="firstName" value="" required>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="lastName">Last name</label>
+            <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="username">Username</label>
+          <div class="input-group">
+            <input type="text" class="form-control" id="username" placeholder="Username" required>
+            <div class="invalid-feedback" style="width: 100%;">
+              Your username is required.
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="email">Email <span class="text-muted">(Optional)</span></label>
+          <input type="email" class="form-control" id="email" placeholder="you@example.com">
+          <div class="invalid-feedback">
+            Please enter a valid email address for shipping updates.
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="address">Address</label>
+          <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
+          <div class="invalid-feedback">
+            Please enter your shipping address.
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="address2">Address 2 <span class="text-muted">(Optional)</span></label>
+          <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
+        </div>
+
+        <div class="row">
+          <div class="col-md-5 mb-3">
+            <label for="country">Country</label>
+            <select class="custom-select d-block w-100" id="country" required>
+              <option value="">Choose...</option>
+              <option>United States</option>
+            </select>
+            <div class="invalid-feedback">
+              Please select a valid country.
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="state">State</label>
+            <select class="custom-select d-block w-100" id="state" required>
+              <option value="">Choose...</option>
+              <option>California</option>
+            </select>
+            <div class="invalid-feedback">
+              Please provide a valid state.
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <label for="zip">Zip</label>
+            <input type="text" class="form-control" id="zip" placeholder="" required>
+            <div class="invalid-feedback">
+              Zip code required.
+            </div>
+          </div>
+        </div>
+        <hr class="mb-4">
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="same-address">
+          <label class="custom-control-label" for="same-address">Shipping address is the same as my billing address</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="save-info">
+          <label class="custom-control-label" for="save-info">Save this information for next time</label>
+        </div>
+        <hr class="mb-4">
+
+        <h4 class="mb-3">Payment</h4>
+
+        <div class="d-block my-3">
+          <div class="custom-control custom-radio">
+            <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
+            <label class="custom-control-label" for="credit">Credit card</label>
+          </div>
+          <div class="custom-control custom-radio">
+            <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
+            <label class="custom-control-label" for="debit">Debit card</label>
+          </div>
+          <div class="custom-control custom-radio">
+            <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
+            <label class="custom-control-label" for="paypal">PayPal</label>
+          </div>
+        </div>
+
+        <input id="var_0" value=11.0656 name='var_0'  type="number" hidden>
+        <input id="var_1" value=7.7798 name='var_1'  type="number" hidden>
+        <input id="var_2" value=12.9536 name='var_2'  type="number" hidden>
+        <input id="var_3" value=9.4292 name='var_3'  type="number" hidden>
+        <input id="var_4" value=11.4327 name='var_4'  type="number" hidden>
+        <input id="var_5" value=-2.3805 name='var_5'  type="number" hidden>
+        <input id="var_6" value=5.8493 name='var_6'  type="number" hidden>
+        <input id="var_7" value=18.2675 name='var_7'  type="number" hidden>
+        <input id="var_8" value=2.1337 name='var_8'  type="number" hidden>
+        <input id="var_9" value=8.81 name='var_9'  type="number" hidden>
+        <input id="var_10" value=-2.0248 name='var_10'  type="number" hidden>
+        <input id="var_11" value=-4.3554 name='var_11'  type="number" hidden>
+        <input id="var_12" value=13.9696 name='var_12'  type="number" hidden>
+        <input id="var_13" value=0.3458 name='var_13'  type="number" hidden>
+        <input id="var_14" value=7.5408 name='var_14'  type="number" hidden>
+        <input id="var_15" value=14.5001 name='var_15'  type="number" hidden>
+        <input id="var_16" value=7.7028 name='var_16'  type="number" hidden>
+        <input id="var_17" value=-19.0919 name='var_17'  type="number" hidden>
+        <input id="var_18" value=15.5806 name='var_18'  type="number" hidden>
+        <input id="var_19" value=16.1763 name='var_19'  type="number" hidden>
+        <input id="var_20" value=3.7088 name='var_20'  type="number" hidden>
+        <input id="var_21" value=18.8064 name='var_21'  type="number" hidden>
+        <input id="var_22" value=1.5899 name='var_22'  type="number" hidden>
+        <input id="var_23" value=3.0654 name='var_23'  type="number" hidden>
+        <input id="var_24" value=6.4509 name='var_24'  type="number" hidden>
+        <input id="var_25" value=14.1192 name='var_25'  type="number" hidden>
+        <input id="var_26" value=-9.4902 name='var_26'  type="number" hidden>
+        <input id="var_27" value=-2.1917 name='var_27'  type="number" hidden>
+        <input id="var_28" value=5.7107 name='var_28'  type="number" hidden>
+        <input id="var_29" value=3.7864 name='var_29'  type="number" hidden>
+        <input id="var_30" value=-1.7981 name='var_30'  type="number" hidden>
+        <input id="var_31" value=9.2645 name='var_31'  type="number" hidden>
+        <input id="var_32" value=2.0657 name='var_32'  type="number" hidden>
+        <input id="var_33" value=12.7753 name='var_33'  type="number" hidden>
+        <input id="var_34" value=11.3334 name='var_34'  type="number" hidden>
+        <input id="var_35" value=8.1462 name='var_35'  type="number" hidden>
+        <input id="var_36" value=-0.061 name='var_36'  type="number" hidden>
+        <input id="var_37" value=3.5331 name='var_37'  type="number" hidden>
+        <input id="var_38" value=9.7804 name='var_38'  type="number" hidden>
+        <input id="var_39" value=8.7625 name='var_39'  type="number" hidden>
+        <input id="var_40" value=-15.6305 name='var_40'  type="number" hidden>
+        <input id="var_41" value=18.8766 name='var_41'  type="number" hidden>
+        <input id="var_42" value=11.2864 name='var_42'  type="number" hidden>
+        <input id="var_43" value=11.8362 name='var_43'  type="number" hidden>
+        <input id="var_44" value=13.368 name='var_44'  type="number" hidden>
+        <input id="var_45" value=-31.9891 name='var_45'  type="number" hidden>
+        <input id="var_46" value=12.1776 name='var_46'  type="number" hidden>
+        <input id="var_47" value=8.7714 name='var_47'  type="number" hidden>
+        <input id="var_48" value=17.2011 name='var_48'  type="number" hidden>
+        <input id="var_49" value=16.8508 name='var_49'  type="number" hidden>
+        <input id="var_50" value=13.0534 name='var_50'  type="number" hidden>
+        <input id="var_51" value=14.4069 name='var_51'  type="number" hidden>
+        <input id="var_52" value=-4.8525 name='var_52'  type="number" hidden>
+        <input id="var_53" value=7.3213 name='var_53'  type="number" hidden>
+        <input id="var_54" value=-0.5259 name='var_54'  type="number" hidden>
+        <input id="var_55" value=16.6365 name='var_55'  type="number" hidden>
+        <input id="var_56" value=19.3036 name='var_56'  type="number" hidden>
+        <input id="var_57" value=6.4129 name='var_57'  type="number" hidden>
+        <input id="var_58" value=-5.3948 name='var_58'  type="number" hidden>
+        <input id="var_59" value=9.3269 name='var_59'  type="number" hidden>
+        <input id="var_60" value=11.9314 name='var_60'  type="number" hidden>
+        <input id="var_61" value=-3.575 name='var_61'  type="number" hidden>
+        <input id="var_62" value=-0.7706 name='var_62'  type="number" hidden>
+        <input id="var_63" value=0.8705 name='var_63'  type="number" hidden>
+        <input id="var_64" value=6.9282 name='var_64'  type="number" hidden>
+        <input id="var_65" value=2.8914 name='var_65'  type="number" hidden>
+        <input id="var_66" value=5.9744 name='var_66'  type="number" hidden>
+        <input id="var_67" value=17.4851 name='var_67'  type="number" hidden>
+        <input id="var_68" value=5.0125 name='var_68'  type="number" hidden>
+        <input id="var_69" value=-1.423 name='var_69'  type="number" hidden>
+        <input id="var_70" value=33.3401 name='var_70'  type="number" hidden>
+        <input id="var_71" value=0.8018 name='var_71'  type="number" hidden>
+        <input id="var_72" value=-4.7906 name='var_72'  type="number" hidden>
+        <input id="var_73" value=30.2708 name='var_73'  type="number" hidden>
+        <input id="var_74" value=26.8339 name='var_74'  type="number" hidden>
+        <input id="var_75" value=21.7205 name='var_75'  type="number" hidden>
+        <input id="var_76" value=7.3075 name='var_76'  type="number" hidden>
+        <input id="var_77" value=14.081 name='var_77'  type="number" hidden>
+        <input id="var_78" value=3.1192 name='var_78'  type="number" hidden>
+        <input id="var_79" value=17.4265 name='var_79'  type="number" hidden>
+        <input id="var_80" value=9.4883 name='var_80'  type="number" hidden>
+        <input id="var_81" value=16.906 name='var_81'  type="number" hidden>
+        <input id="var_82" value=14.5117 name='var_82'  type="number" hidden>
+        <input id="var_83" value=10.0276 name='var_83'  type="number" hidden>
+        <input id="var_84" value=-0.9706 name='var_84'  type="number" hidden>
+        <input id="var_85" value=20.4588 name='var_85'  type="number" hidden>
+        <input id="var_86" value=4.7945 name='var_86'  type="number" hidden>
+        <input id="var_87" value=20.416 name='var_87'  type="number" hidden>
+        <input id="var_88" value=13.1633 name='var_88'  type="number" hidden>
+        <input id="var_89" value=7.9307 name='var_89'  type="number" hidden>
+        <input id="var_90" value=-7.6509 name='var_90'  type="number" hidden>
+        <input id="var_91" value=7.0834 name='var_91'  type="number" hidden>
+        <input id="var_92" value=15.2324 name='var_92'  type="number" hidden>
+        <input id="var_93" value=10.1416 name='var_93'  type="number" hidden>
+        <input id="var_94" value=5.9156 name='var_94'  type="number" hidden>
+        <input id="var_95" value=-0.5775 name='var_95'  type="number" hidden>
+        <input id="var_96" value=5.76 name='var_96'  type="number" hidden>
+        <input id="var_97" value=30.3238 name='var_97'  type="number" hidden>
+        <input id="var_98" value=2.1251 name='var_98'  type="number" hidden>
+        <input id="var_99" value=1.8585 name='var_99'  type="number" hidden>
+        <input id="var_100" value=-9.2198 name='var_100'  type="number" hidden>
+        <input id="var_101" value=17.3089 name='var_101'  type="number" hidden>
+        <input id="var_102" value=30.9548 name='var_102'  type="number" hidden>
+        <input id="var_103" value=1.4918 name='var_103'  type="number" hidden>
+        <input id="var_104" value=12.8721 name='var_104'  type="number" hidden>
+        <input id="var_105" value=3.4902 name='var_105'  type="number" hidden>
+        <input id="var_106" value=8.2856 name='var_106'  type="number" hidden>
+        <input id="var_107" value=11.9794 name='var_107'  type="number" hidden>
+        <input id="var_108" value=14.0176 name='var_108'  type="number" hidden>
+        <input id="var_109" value=15.0763 name='var_109'  type="number" hidden>
+        <input id="var_110" value=3.7662 name='var_110'  type="number" hidden>
+        <input id="var_111" value=6.0426 name='var_111'  type="number" hidden>
+        <input id="var_112" value=4.4243 name='var_112'  type="number" hidden>
+        <input id="var_113" value=14.1799 name='var_113'  type="number" hidden>
+        <input id="var_114" value=2.0921 name='var_114'  type="number" hidden>
+        <input id="var_115" value=1.5493 name='var_115'  type="number" hidden>
+        <input id="var_116" value=3.2206 name='var_116'  type="number" hidden>
+        <input id="var_117" value=0.0172 name='var_117'  type="number" hidden>
+        <input id="var_118" value=-6.6602 name='var_118'  type="number" hidden>
+        <input id="var_119" value=8.4785 name='var_119'  type="number" hidden>
+        <input id="var_120" value=42.0248 name='var_120'  type="number" hidden>
+        <input id="var_121" value=11.4164 name='var_121'  type="number" hidden>
+        <input id="var_122" value=0.4564 name='var_122'  type="number" hidden>
+        <input id="var_123" value=9.4006 name='var_123'  type="number" hidden>
+        <input id="var_124" value=0.9685 name='var_124'  type="number" hidden>
+        <input id="var_125" value=12.4929 name='var_125'  type="number" hidden>
+        <input id="var_126" value=14.124 name='var_126'  type="number" hidden>
+        <input id="var_127" value=4.0388 name='var_127'  type="number" hidden>
+        <input id="var_128" value=-4.4442 name='var_128'  type="number" hidden>
+        <input id="var_129" value=16.6684 name='var_129'  type="number" hidden>
+        <input id="var_130" value=12.538 name='var_130'  type="number" hidden>
+        <input id="var_131" value=0.9205 name='var_131'  type="number" hidden>
+        <input id="var_132" value=10.5998 name='var_132'  type="number" hidden>
+        <input id="var_133" value=7.5147 name='var_133'  type="number" hidden>
+        <input id="var_134" value=-4.1748 name='var_134'  type="number" hidden>
+        <input id="var_135" value=-0.4824 name='var_135'  type="number" hidden>
+        <input id="var_136" value=10.5267 name='var_136'  type="number" hidden>
+        <input id="var_137" value=17.7547 name='var_137'  type="number" hidden>
+        <input id="var_138" value=-6.5226 name='var_138'  type="number" hidden>
+        <input id="var_139" value=-2.5502 name='var_139'  type="number" hidden>
+        <input id="var_140" value=-5.1547 name='var_140'  type="number" hidden>
+        <input id="var_141" value=-2.1246 name='var_141'  type="number" hidden>
+        <input id="var_142" value=19.8319 name='var_142'  type="number" hidden>
+        <input id="var_143" value=13.0752 name='var_143'  type="number" hidden>
+        <input id="var_144" value=9.2275 name='var_144'  type="number" hidden>
+        <input id="var_145" value=3.0213 name='var_145'  type="number" hidden>
+        <input id="var_146" value=11.6793 name='var_146'  type="number" hidden>
+        <input id="var_147" value=-11.6827 name='var_147'  type="number" hidden>
+        <input id="var_148" value=4.1017 name='var_148'  type="number" hidden>
+        <input id="var_149" value=5.2954 name='var_149'  type="number" hidden>
+        <input id="var_150" value=18.7741 name='var_150'  type="number" hidden>
+        <input id="var_151" value=9.8892 name='var_151'  type="number" hidden>
+        <input id="var_152" value=7.5219 name='var_152'  type="number" hidden>
+        <input id="var_153" value=14.9745 name='var_153'  type="number" hidden>
+        <input id="var_154" value=18.988 name='var_154'  type="number" hidden>
+        <input id="var_155" value=1.0842 name='var_155'  type="number" hidden>
+        <input id="var_156" value=11.9125 name='var_156'  type="number" hidden>
+        <input id="var_157" value=-4.5103 name='var_157'  type="number" hidden>
+        <input id="var_158" value=16.1361 name='var_158'  type="number" hidden>
+        <input id="var_159" value=11.0067 name='var_159'  type="number" hidden>
+        <input id="var_160" value=5.9232 name='var_160'  type="number" hidden>
+        <input id="var_161" value=5.4113 name='var_161'  type="number" hidden>
+        <input id="var_162" value=3.8302 name='var_162'  type="number" hidden>
+        <input id="var_163" value=5.738 name='var_163'  type="number" hidden>
+        <input id="var_164" value=-8.6105 name='var_164'  type="number" hidden>
+        <input id="var_165" value=22.953 name='var_165'  type="number" hidden>
+        <input id="var_166" value=2.5531 name='var_166'  type="number" hidden>
+        <input id="var_167" value=-0.2836 name='var_167'  type="number" hidden>
+        <input id="var_168" value=4.3416 name='var_168'  type="number" hidden>
+        <input id="var_169" value=5.1855 name='var_169'  type="number" hidden>
+        <input id="var_170" value=4.2603 name='var_170'  type="number" hidden>
+        <input id="var_171" value=1.6779 name='var_171'  type="number" hidden>
+        <input id="var_172" value=29.0849 name='var_172'  type="number" hidden>
+        <input id="var_173" value=8.4685 name='var_173'  type="number" hidden>
+        <input id="var_174" value=18.1317 name='var_174'  type="number" hidden>
+        <input id="var_175" value=12.2818 name='var_175'  type="number" hidden>
+        <input id="var_176" value=-0.6912 name='var_176'  type="number" hidden>
+        <input id="var_177" value=10.2226 name='var_177'  type="number" hidden>
+        <input id="var_178" value=-5.5579 name='var_178'  type="number" hidden>
+        <input id="var_179" value=2.2926 name='var_179'  type="number" hidden>
+        <input id="var_180" value=-4.5358 name='var_180'  type="number" hidden>
+        <input id="var_181" value=10.3903 name='var_181'  type="number" hidden>
+        <input id="var_182" value=-15.4937 name='var_182'  type="number" hidden>
+        <input id="var_183" value=3.9697 name='var_183'  type="number" hidden>
+        <input id="var_184" value=31.3521 name='var_184'  type="number" hidden>
+        <input id="var_185" value=-1.1651 name='var_185'  type="number" hidden>
+        <input id="var_186" value=9.2874 name='var_186'  type="number" hidden>
+        <input id="var_187" value=-23.5705 name='var_187'  type="number" hidden>
+        <input id="var_188" value=13.2643 name='var_188'  type="number" hidden>
+        <input id="var_189" value=1.6591 name='var_189'  type="number" hidden>
+        <input id="var_190" value=-2.1556 name='var_190'  type="number" hidden>
+        <input id="var_191" value=11.8495 name='var_191'  type="number" hidden>
+        <input id="var_192" value=-1.43 name='var_192'  type="number" hidden>
+        <input id="var_193" value=2.4508 name='var_193'  type="number" hidden>
+        <input id="var_194" value=13.7112 name='var_194'  type="number" hidden>
+        <input id="var_195" value=2.4669 name='var_195'  type="number" hidden>
+        <input id="var_196" value=4.3654 name='var_196'  type="number" hidden>
+        <input id="var_197" value=10.72 name='var_197'  type="number" hidden>
+        <input id="var_198" value=15.4722 name='var_198'  type="number" hidden>
+        <input id="var_199" value=-8.7197 name='var_199'  type="number" hidden>
+      
+
+        <hr class="mb-4">
+        <button class="btn btn-primary btn-lg btn-block" type="submit">Calculate Risk</button>
+      </form>
+    </div>
+  </div>
+
+  <footer class="my-5 pt-5 text-muted text-center text-small">
+    <p class="mb-1">&copy; 2017-2018 Company Name</p>
+    <ul class="list-inline">
+      <li class="list-inline-item"><a href="#">Privacy</a></li>
+      <li class="list-inline-item"><a href="#">Terms</a></li>
+      <li class="list-inline-item"><a href="#">Support</a></li>
+    </ul>
+  </footer>
+</div>
+
+
+<script src="static/js/raphael-2.1.4.min.js"></script>
+<script src="static/js/justgage.js"></script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+      var gg1 = new JustGage({
+          id: "gg1",
+          value: 50,
+          min: 0,
+          max: 100,
+          title: "Target",
+          label: "temperature",
+          textRenderer: customValue
+      });
+
+      document.getElementById('gg1_refresh').addEventListener('click', function() {
+          gg1.refresh(getRandomInt(0, 100));
+          return false;
+      });
+
+      function customValue(val) {
+          if (val < 50) {
+              return 'low';
+          } else if (val > 50) {
+              return 'high';
+          } else if (val === 50) {
+              return 'ideal';
+          }
+      }
+  });
+  </script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="/docs/4.2/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="/docs/4.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-zDnhMsjVZfS3hiP7oCBRmfjkQC4fzxVxFhBx8Hkz2aZX8gEvA/jsP3eXRCvzTofP" crossorigin="anonymous"></script>
+        <script src="form-validation.js"></script></body>
+</html>
