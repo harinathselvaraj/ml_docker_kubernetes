@@ -18,6 +18,7 @@ RUN apt-get update \
 COPY requirements.txt /app/requirements.txt
 WORKDIR app
 RUN pip install --user -r requirements.txt
+RUN pip install gunicorn
 COPY . /app
-ENTRYPOINT [ "python" ]
-CMD [ "application.py" ]
+EXPOSE 5000
+CMD ["gunicorn", "-b", "0.0.0.0:5000", "app"]
